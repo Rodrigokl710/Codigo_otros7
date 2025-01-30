@@ -1,0 +1,43 @@
+package Codigo_otros7;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Otros7 {
+	public static void main(String[] args) {
+	
+
+    HashMap<String, String> capitales = new HashMap<String, String>();
+//Correcciones en Hashmap cambio <String, String>, importación de Hashmap
+    capitales.put("Canadá", "Otawwa");
+    capitales.put("Estados Unidos", "Washington DC");
+    capitales.put("México", "México DF");
+    capitales.put("Belice", "Belmopán");
+    capitales.put("Costa rica", "San José");
+    capitales.put("El Salvador", "El Salvador");
+    capitales.put("Guatemala", "Ciudad de Guatemala");
+    capitales.put("Honduras", "Tegucigalpa");
+    capitales.put("Nicaragua", "Managua");
+    capitales.put("Panamá", "Panamá");
+  //Faltante capital de El Salvador
+    String c = "";
+    do {
+      System.out.println("Escribe el nombre de un país y te diré su capital: ");
+      Scanner s = new Scanner(System.in);
+      
+      if (!s.equals("salir")) {
+        if (capitales.containsValue(s)) {
+          System.out.println("La capital de " + s);
+          System.out.println(" es " + capitales.get(s));
+        } else {
+          System.out.println("No conozco la respuesta ");
+          System.out.println("¿cuál es la capital de " + s + "?: ");
+          String capitales1 = s.nextLine();
+          capitales.put(c, capitales1);
+          System.out.println("Gracias por enseñarme nuevas capitales");
+        }
+      //correcciones de System.out.println y capitales por ca
+        //cambio de ca por capitales1
+      }}while (!s.equals("salir"));
+  //cambios de la variable c por s
+}}
